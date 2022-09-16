@@ -3,8 +3,8 @@ import 'package:login_flutter/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class User with ChangeNotifier {
-  String _name = "";
-  String name() => _name;
+  String _name = "noooo";
+  String get name => _name;
 
   Future<void> getname() async {
     SharedPreferences sp = await SharedPreferences.getInstance();

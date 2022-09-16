@@ -33,14 +33,19 @@ class _screen2State extends State<screen2> {
 
   @override
   Widget build(BuildContext context) {
-    context.read<User>().getname;
+    context.read<User>().getname();
     return Scaffold(
       body: SafeArea(
           child: Center(
         child: Column(
           children: [
-            Text(context.watch<User>().name()),
-            Text(name),
+            Text("${context.watch<User>().name}"),
+            //Text(name),
+            // ElevatedButton(
+            //     onPressed: () {
+            //       context.read<User>().getname();
+            //     },
+            //     child: Text("data")),
             ElevatedButton(
                 onPressed: () {
                   deldata();

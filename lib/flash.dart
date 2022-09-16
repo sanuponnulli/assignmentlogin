@@ -39,7 +39,7 @@ class _flashState extends State<flash> {
 
 Future<void> getdata(BuildContext context) async {
   final sharedpref = await SharedPreferences.getInstance();
-  final savedvalue = sharedpref.getString("saved_value");
+  final savedvalue = sharedpref.getString("name");
   await Future.delayed(Duration(seconds: 3));
   if (savedvalue != null) {
     Navigator.of(context)
